@@ -41,7 +41,7 @@ ol, ul, menu { list-style: none; }
 html, body {
   font-family: sans-serif;
   font-optical-sizing: auto;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.667;
   text-align: justify;
 }
