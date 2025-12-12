@@ -30,7 +30,6 @@ ol, ul, menu { list-style: none; }
   :root {
     --paper-colour: #232323;
     --foreground-colour: #bbb;
-    --secondary: #bbbb;
     --background-colour: #1b1b1b;
     --border-colour: rgba(255, 255, 255, 0.1);
     --theme-colour: #ccc;
@@ -109,8 +108,11 @@ body {
     border-radius: 0.333rem;
     border: 1px solid var(--border-colour);
     background-color: var(--quote-colour);
-  }
 
+    &:last-child {
+      margin-block-end: calc(0.5rlh - 0.5rem);
+    }
+  }
 }
 
 a {
@@ -176,6 +178,7 @@ header nav, footer {
 footer {
   width: 30rem;
   color: var(--secondary);
+  opacity: 0.72;
 
   p + p {
     margin-block-start: 1rlh;
