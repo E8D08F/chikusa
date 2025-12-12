@@ -1,0 +1,20 @@
+{{ define "main" }}
+
+<div class="posts">
+  {{ $paginator := .Paginate (where .Site.Pages.ByDate.Reverse "Type" "post") }}
+  {{ range .Paginator.Pages }}
+  {{ if .Title }}
+  <div class="post-mask">
+    <article class="post">
+      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+  {{ else }}
+  <div class="post-mask shortie">
+    <article class="post">
+  {{ end }}
+      {{ .Content }}
+    </article>
+  </div>
+  {{ end }}
+</div>
+
+{{ end }}
