@@ -59,6 +59,12 @@ body {
   .post-mask {
     position: relative;
 
+    &:not(.shortie) {
+      .button {
+        display: none;
+      }
+    }
+
     &:hover .button {
       opacity: 1;
     }
