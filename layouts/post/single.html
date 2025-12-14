@@ -1,0 +1,19 @@
+{{ define "main" }}
+
+<div class="posts">
+  {{ if .Title }}
+  <div class="post-mask">
+    <article class="post">
+      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+  {{ else }}
+  <div class="post-mask shortie">
+    <article class="post">
+  {{ end }}
+      {{ .Content }}
+    </article>
+    <a href="{{ .Permalink }}" class="material-symbols-outlined button">link</a>
+  </div>
+  {{ end }}
+</div>
+
+{{ end }}
