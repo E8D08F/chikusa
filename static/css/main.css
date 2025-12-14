@@ -78,13 +78,14 @@ body {
   overflow-x: hidden;
 
   font-feature-settings:
-    "chws", "vchw",
     "palt", "vpal";  /* Ideally `pkna` but Source Han doesn't support */
 }
 
-/* Disable for now because of Safari’s layout err */
-_::-webkit-full-page-media, _:future, :root body {
-  font-feature-settings: "chws" 0, "vchw" 0;
+/* Only do PcS in Chrome (Safari has layout err) */
+@supports (text-spacing-trim: normal) {
+  body {
+    font-feature-settings: "chws", "vchw";
+  }
 }
 
 a {
