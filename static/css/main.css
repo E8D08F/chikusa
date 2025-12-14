@@ -56,6 +56,10 @@ body {
 }
 
 .posts {
+  a:hover, ::selection {
+    color: var(--paper-colour);
+  }
+
   .post-mask {
     position: relative;
 
