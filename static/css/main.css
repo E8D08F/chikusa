@@ -84,7 +84,7 @@ body {
 /* Only do PcS in Chrome (Safari has layout err) */
 @supports (text-spacing-trim: normal) {
   body {
-    font-feature-settings: "chws", "vchw";
+    font-feature-settings: "palt", "vpal", "chws", "vchw";
   }
 }
 
