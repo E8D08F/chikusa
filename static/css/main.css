@@ -26,7 +26,7 @@ ol, ul, menu { list-style: none; }
   --paper-colour: #e5dbc0;
   --foreground-colour: #584d35; /* TODO */
   --background-colour: #e8d08f;
-  --border-colour: #c9c5b5;
+  --border-colour: #b8b8b8;
   --theme-colour: #50422c;
   --quote-colour: #e2d7ba;
   --unit-length: calc(30rem + 2 * (2rlh - 1rem));
@@ -37,7 +37,7 @@ ol, ul, menu { list-style: none; }
     --paper-colour: #232323;
     --foreground-colour: #bbb;
     --background-colour: #1b1b1b;
-    --border-colour: rgba(255, 255, 255, 0.1);
+    --border-colour: #444;
     --theme-colour: #ccc;
     --quote-colour: #2e2e2e;
   }
