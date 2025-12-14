@@ -38,7 +38,7 @@ ol, ul, menu { list-style: none; }
     --foreground-colour: #aaa;
     --background-colour: #1b1b1b;
     --border-colour: black;
-    --theme-colour: #b6b6b6;
+    --theme-colour: #ccc;
     --quote-colour: #2e2e2e;
   }
 }
