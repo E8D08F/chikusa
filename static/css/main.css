@@ -83,8 +83,8 @@ body {
 }
 
 /* Disable for now because of Safari’s layout err */
-@supports (-webkit-touch-callout: none) {
-  body { font-feature-settings: "chws" 0, "vchw" 0; }
+_::-webkit-full-page-media, _:future, :root body {
+  font-feature-settings: "chws" 0, "vchw" 0;
 }
 
 a {
