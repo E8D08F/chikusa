@@ -73,7 +73,7 @@ body {
   width: 100vw;
   overflow-x: hidden;
 
-  font-feature-settings: "chws", "vchw", "palt", "vpal";
+  font-feature-settings: "chws", "vchw", "palt", "vpal", "aalt";
 }
 
 a {
