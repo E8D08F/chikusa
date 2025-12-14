@@ -209,7 +209,10 @@ header nav, #ū-ê-bô-ê {
 #ū-ê-bô-ê {
   width: 30rem;
   color: var(--secondary);
-  opacity: 0.72;
 
   p + p { margin-block-start: 1rlh; }
+}
+
+.faded {
+  opacity: 0.72;
 }
