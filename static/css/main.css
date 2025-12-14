@@ -98,7 +98,7 @@ a:hover, ::selection {
 
   /* Paper size */
   width: var(--unit-length);
-  &.single { width: calc(0.5rem + 28rlh + (2rlh - 1rem)); }
+  &.single:not(.shortie) { width: calc(0.5rem + 28rlh + (2rlh - 1rem)); }
 
   margin: 0 auto;
   & + .paper { margin-top: calc(2rlh - 1rem); }
