@@ -23,12 +23,12 @@ ol, ul, menu { list-style: none; }
 
 
 :root {
-  --paper-colour: #e5dbc0;
+  --paper-colour: #e8d7aa;
   --foreground-colour: #584d35; /* TODO */
   --background-colour: #e8d08f;
   --border-colour: #b8b8b8;
   --theme-colour: #50422c;
-  --quote-colour: #e2d7ba;
+  --quote-colour: #ebdeb9;
   --unit-length: calc(30rem + 2 * (2rlh - 1rem));
 }
 
@@ -37,7 +37,7 @@ ol, ul, menu { list-style: none; }
     --paper-colour: #232323;
     --foreground-colour: #bbb;
     --background-colour: #1b1b1b;
-    --border-colour: #444;
+    --border-colour: black;
     --theme-colour: #ccc;
     --quote-colour: #2e2e2e;
   }
@@ -79,6 +79,16 @@ a:hover, ::selection {
 
 .tcy { text-combine-upright: all; }
 
+.paper, .paper blockquote {
+  box-shadow: inset 0 1px 0 #fff6;
+}
+
+@media (prefers-color-scheme: dark) {
+  .paper, .paper blockquote {
+    box-shadow: inset 0 0 0 1px #fff2;
+  }
+}
+
 .paper {
   a:hover, ::selection { color: var(--paper-colour); }
 
@@ -105,6 +115,8 @@ a:hover, ::selection {
 
   margin: 0 auto;
   & + .paper { margin-top: calc(2rlh - 1rem); }
+
+
 
   background-color: var(--paper-colour);
   border: 1px solid var(--border-colour);
