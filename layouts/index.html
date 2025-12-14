@@ -4,7 +4,7 @@
   {{ $paginator := .Paginate (where .Site.Pages.ByDate.Reverse "Type" "post") }}
   {{ range .Paginator.Pages }}
   {{ if .Title }}
-  <div class="post-mask">
+  <div class="paper">
     <article class="post">
       <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
   {{ else }}
@@ -13,7 +13,7 @@
   {{ end }}
       {{ .Content }}
     </article>
-    <a href="{{ .Permalink }}" class="material-symbols-outlined button">link</a>
+    <a href="{{ .Permalink }}" class="material-symbols-outlined link">link</a>
   </div>
   {{ end }}
 </div>
