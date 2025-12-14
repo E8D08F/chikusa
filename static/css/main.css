@@ -125,7 +125,7 @@ a:hover, ::selection {
 }
 
 .post {
-  /* width: 100%; */
+  width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
   padding-inline: calc(2rlh - 1rem);
