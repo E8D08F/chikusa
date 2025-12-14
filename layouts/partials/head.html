@@ -1,7 +1,11 @@
 <meta charset="utf-8">
 
 <title>
-  {{ .Site.Title }}{{ if and .Title (ne .Title .Site.Title) }} – {{ .Title }}{{ end }}
+  {{ if .Title }}
+    {{ .Title }}
+  {{ else }}
+    {{ .Site.Title }}
+  {{ end }}
 </title>
 
 {{ if ne .Kind "home" }}
