@@ -35,10 +35,10 @@ ol, ul, menu { list-style: none; }
 @media (prefers-color-scheme: dark) {
   :root {
     --paper-colour: #232323;
-    --foreground-colour: #bbb;
+    --foreground-colour: #aaa;
     --background-colour: #1b1b1b;
     --border-colour: black;
-    --theme-colour: #ccc;
+    --theme-colour: #b6b6b6;
     --quote-colour: #2e2e2e;
   }
 }
