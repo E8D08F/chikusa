@@ -78,8 +78,13 @@ body {
   overflow-x: hidden;
 
   font-feature-settings:
-    /* "chws", "vchw", */  /* Disable for now because of Safari’s layout err */
+    "chws", "vchw",
     "palt", "vpal";  /* Ideally `pkna` but Source Han doesn't support */
+}
+
+/* Disable for now because of Safari’s layout err */
+@supports (-webkit-touch-callout: none) {
+  body { font-feature-settings: "chws" 0, "vchw" 0; }
 }
 
 a {
