@@ -1,4 +1,12 @@
 @import "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200";
+@import "https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100..900&display=swap";
+
+
+@font-face {
+  font-family: punc;
+  src: url('/assets/punc.ttf') format('truetype');
+}
+
 .material-symbols-outlined {
   font-size: inherit;
 }
@@ -49,7 +57,9 @@ html, body {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: punc, 'Noto Sans HK', sans-serif;
+  font-weight: 400;
+  font-optical-sizing: auto;
   text-align: justify;
 
   color: var(--foreground-colour);
@@ -57,10 +67,12 @@ body {
 
   width: 100vw;
   overflow-x: hidden;
+
+  font-feature-settings: "chws", "vchw";
 }
 
 a {
-  font-weight: bold;
+  font-weight: 600;
   color: var(--theme-colour);
   text-decoration: none;
 
@@ -190,7 +202,7 @@ header {
   }
 
   &::before {
-    content: "";
+    content: '';
     width: 100vw;
     position: fixed;
     height: 2rlh;
