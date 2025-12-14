@@ -3,8 +3,13 @@
 
 
 @font-face {
-  font-family: punckana;
-  src: url('/assets/punckana.ttf') format('truetype');
+  font-family: punc;
+  src: url('/assets/punc.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: kana;
+  src: url('/assets/kana.ttf') format('truetype');
 }
 
 .material-symbols-outlined {
@@ -57,7 +62,7 @@ html, body {
 }
 
 body {
-  font-family: punckana, Aleo, 'Noto Sans HK', sans-serif;
+  font-family: punc, kana, Aleo, 'Noto Sans HK', sans-serif;
   font-weight: 400;
   font-optical-sizing: auto;
   text-align: justify;
@@ -68,7 +73,7 @@ body {
   width: 100vw;
   overflow-x: hidden;
 
-  font-feature-settings: "chws", "vchw";
+  font-feature-settings: "chws", "vchw", "palt", "vpal";
 }
 
 a {
