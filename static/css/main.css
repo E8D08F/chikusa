@@ -62,7 +62,11 @@ html, body {
 }
 
 body {
-  font-family: punc, kana, Aleo, 'Noto Sans HK', sans-serif;
+  /* Set locale to `zh-HK` to enable essential substitutions of puncs */
+  font-family:
+    punc,  /* Use features `chws`/`vchw` */
+    kana,  /* Use features `palt`/`vpal` */
+    Aleo, 'Noto Sans HK', sans-serif;
   font-weight: 400;
   font-optical-sizing: auto;
   text-align: justify;
@@ -73,7 +77,9 @@ body {
   width: 100vw;
   overflow-x: hidden;
 
-  font-feature-settings: "chws", "vchw", "palt", "vpal", "aalt";
+  font-feature-settings:
+    /* "chws", "vchw", */  /* Disable for now because of Safari’s layout err */
+    "palt", "vpal";  /* Ideally `pkna` but Source Han doesn't support */
 }
 
 a {
