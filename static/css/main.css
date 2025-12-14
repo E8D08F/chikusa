@@ -23,12 +23,12 @@ ol, ul, menu { list-style: none; }
 
 
 :root {
-  --paper-colour: white;
-  --foreground-colour: #333; /* TODO */
-  --background-colour: #f7f7f7;
-  --border-colour: #dbdbdb;
-  --theme-colour: #333;
-  --quote-colour: #fafafa;
+  --paper-colour: #e5dbc0;
+  --foreground-colour: #584d35; /* TODO */
+  --background-colour: #e8d08f;
+  --border-colour: #c9c5b5;
+  --theme-colour: #50422c;
+  --quote-colour: #e2d7ba;
   --unit-length: calc(30rem + 2 * (2rlh - 1rem));
 }
 
@@ -162,7 +162,6 @@ a {
 a:hover, ::selection {
   color: var(--background-colour);
   background-color: var(--foreground-colour);
-  text-shadow: none;
 }
 
 .tcy {
@@ -175,7 +174,6 @@ header {
   height: calc(1rlh + 1rem + 2 * (2rlh - 1rem));
   position: sticky;
   top: calc(0.5rem - 2.5rlh);
-  text-shadow: var(--background-colour) 0 2px 6px;
   z-index: 100;
 
   nav {
