@@ -1,4 +1,5 @@
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>
   {{ if .Title }}
@@ -22,8 +23,8 @@
   <link rel="alternate" href="{{ "podcast.json" | absURL }}" type="application/json" title="Podcast">
 {{ end }}
 
+<meta content="{{ .Site.Author.name }}" name="author">
 <link rel="me" href="https://micro.blog/{{ .Site.Author.username }}">
-
 <link rel="shortcut icon" href="https://micro.blog/{{ .Site.Author.username }}/favicon.png" type="image/x-icon">
 <link rel="EditURI" type="application/rsd+xml" href="{{ "rsd.xml" | absURL }}">
 <link rel="authorization_endpoint" href="https://micro.blog/indieauth/auth">
