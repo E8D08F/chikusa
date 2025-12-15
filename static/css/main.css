@@ -264,7 +264,7 @@ header nav, #ū-ê-bô-ê {
       text-align: left;
     }
 
-    &:not(.shortie) {
+    &:not(.shortie), &.single:not(.shortie) {
       width: 99vw;
     }
   }
