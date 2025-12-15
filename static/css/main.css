@@ -242,6 +242,7 @@ header nav, #ū-ê-bô-ê {
 
 #ū-ê-bô-ê {
   max-width: 30rem;
+  margin-inline: calc(2rlh - 1rem);
   color: var(--secondary);
 
   p + p { margin-block-start: 1rlh; }
