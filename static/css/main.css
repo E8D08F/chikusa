@@ -245,11 +245,14 @@ header nav, #ū-ê-bô-ê {
 }
 
 #ū-ê-bô-ê {
-  max-width: 30rem;
-  margin-inline: calc(2rlh - 1rem);
+  width: fit-content;
   color: var(--secondary);
 
-  p + p { margin-block-start: 1rlh; }
+  article {
+    margin-inline: calc(2rlh - 1rem);
+    max-width: 30rem;
+    p + p { margin-block-start: 1rlh; }
+  }
 }
 
 .faded {
@@ -272,5 +275,9 @@ header nav, #ū-ê-bô-ê {
     &:not(.shortie), &.single:not(.shortie) {
       width: 96vw;
     }
+  }
+
+  #ū-ê-bô-ê {
+    text-align: left;
   }
 }
