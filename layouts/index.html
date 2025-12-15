@@ -19,7 +19,9 @@
 </div>
 
 <div id="ū-ê-bô-ê" class="faded">
-  {{ .Site.Params.about_me | safeHTML }}
+  <article>
+    {{ .Site.Params.about_me | safeHTML }}
+  </article>
 </div>
 
 {{ end }}
