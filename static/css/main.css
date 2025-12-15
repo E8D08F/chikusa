@@ -126,8 +126,12 @@ a:hover, ::selection {
   a:hover, ::selection { color: var(--paper-colour); }
 
   /* Place link at the bottom right corner when hovering */
-  .link { opacity: 0; }
-  &:hover .link { opacity: 1; }
+  &:hover .link { opacity: 0.5; }
+  .link {
+    opacity: 0;
+
+    &:hover { opacity: 1; }
+  }
   &:not(.shortie) .link { display: none; }
 
   position: relative;   /* -> */
@@ -257,7 +261,7 @@ header nav, #ū-ê-bô-ê {
     width: 99vw;
 
     &:not(.single) .link {
-      opacity: 1;
+      opacity: 0.5;
     }
 
     &.shortie .post {
