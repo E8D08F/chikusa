@@ -1,12 +1,13 @@
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=0.95">
+
 
 <title>
-  {{ if .Title }}
+  {{- if .Title }}
     {{ .Title }}
   {{ else }}
     {{ .Site.Title }}
-  {{ end }}
+  {{ end -}}
 </title>
 
 {{ if ne .Kind "home" }}
