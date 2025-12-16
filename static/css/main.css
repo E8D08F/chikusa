@@ -119,7 +119,10 @@ code {
   font-family: 'Source Code Pro', monospace;
 }
 
-.tcy { text-combine-upright: all; }
+.tcy {
+  font-family: 'Noto Sans HK', sans-serif;
+  text-combine-upright: all;
+}
 
 .paper, .paper blockquote {
   box-shadow: inset 0 1px 0 #fff6;
