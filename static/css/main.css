@@ -240,18 +240,20 @@ header {
       gap: 1rem;
     }
   }
+}
 
-  &::before {
-    content: '';
-    position: fixed;
-    height: 2rlh;
-    top: 0;
-    left: 0;
-    right: 0;
-    backdrop-filter: blur(54px);
-    z-index: -1;
-    mask-image: linear-gradient(to top, transparent, #000 1.9rem);
-  }
+/* Top links background blur */
+body::before {
+  content: '';
+  position: fixed;
+  height: calc(2rlh + env(safe-area-inset-top));
+  top: 0;
+  left: 0;
+  right: 0;
+  backdrop-filter: blur(54px);
+  z-index: 10;
+
+  mask-image: linear-gradient(to top, transparent, #000 1.9rem);
 }
 
 header nav, #ū-ê-bô-ê {
