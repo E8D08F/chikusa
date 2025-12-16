@@ -71,7 +71,7 @@ body {
   font-weight: 400;
   font-optical-sizing: auto;
   text-align: justify;
-  hanging-punctuation: first;
+  /* hanging-punctuation: first; */
 
   /* Disable unintended font resizing on iOS */
   -webkit-text-size-adjust: 100%;
@@ -111,6 +111,14 @@ a:hover, ::selection {
   color: var(--background-colour);
   background-color: var(--foreground-colour);
 }
+
+/* Squeeze opening bracket to half-wide */
+p::first-letter {
+  font-feature-settings: "palt", "vpal", "halt", "vhal";
+  letter-spacing: 0.5rem;
+  margin-inline-end: -0.5rem;
+}
+
 
 ol {
   list-style-type: cjk-ideographic;
