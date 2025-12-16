@@ -1,5 +1,5 @@
 @import "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200";
-@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Noto+Sans+HK:wght@100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Noto+Sans+HK:wght@100..900&family=Noto+Sans+JP:wght@100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
 
 @font-face {
@@ -66,7 +66,8 @@ body {
   font-family:
     punc,  /* Use features `chws`/`vchw` */
     kana,  /* Use features `palt`/`vpal` */
-    Aleo, 'Noto Sans HK', sans-serif;
+    Aleo,  /* Latin */
+    'Noto Sans HK', 'Note Sans JP', sans-serif;
   font-weight: 400;
   font-optical-sizing: auto;
   text-align: justify;
