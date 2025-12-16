@@ -277,22 +277,25 @@ header nav, #ū-ê-bô-ê {
   .paper {
     width: 100%;
 
-    &:not(.single) .link {
-      opacity: 0.5;
-    }
-
     &.shortie .post {
       width: auto;
       text-align: left;
     }
 
     &:not(.shortie), &.single:not(.shortie) {
-      /* width: 96vw; */
       width: 100%;
     }
   }
 
   #ū-ê-bô-ê {
     text-align: left;
+  }
+}
+
+@media (pointer: coarse), (hover: none) {
+  .paper {
+    &:not(.single) .link {
+      opacity: 0.5;
+    }
   }
 }
