@@ -67,7 +67,7 @@ body {
     punc,  /* Use features `chws`/`vchw` */
     kana,  /* Use features `palt`/`vpal` */
     Aleo,  /* Latin */
-    'Noto Sans HK', 'Note Sans JP', sans-serif;
+    'Noto Sans HK', 'Noto Sans JP', sans-serif;
   font-weight: 400;
   font-optical-sizing: auto;
   text-align: justify;
