@@ -259,7 +259,6 @@ header nav, #ū-ê-bô-ê {
 
 #ū-ê-bô-ê {
   width: fit-content;
-  color: var(--secondary);
 
   article {
     margin-inline: calc(2rlh - 1rem);
