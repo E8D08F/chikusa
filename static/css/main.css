@@ -79,6 +79,7 @@ body {
   color: var(--foreground-colour);
   background-color: var(--background-colour);
 
+  padding: max(calc(100vw - 100%), 0.5rem);
   width: 100vw;
   overflow-x: hidden;
 
@@ -242,10 +243,11 @@ header {
 
   &::before {
     content: '';
-    width: 100vw;
     position: fixed;
     height: 2rlh;
     top: 0;
+    left: 0;
+    right: 0;
     backdrop-filter: blur(54px);
     z-index: -1;
     mask-image: linear-gradient(to top, transparent, #000 1.9rem);
@@ -271,9 +273,9 @@ header nav, #ū-ê-bô-ê {
   opacity: 0.72;
 }
 
-@media (max-width: 520px) {
+@media (max-width: 550px) {
   .paper {
-    width: 96vw;
+    width: 100%;
 
     &:not(.single) .link {
       opacity: 0.5;
@@ -285,7 +287,8 @@ header nav, #ū-ê-bô-ê {
     }
 
     &:not(.shortie), &.single:not(.shortie) {
-      width: 96vw;
+      /* width: 96vw; */
+      width: 100%;
     }
   }
 
