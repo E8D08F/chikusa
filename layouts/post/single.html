@@ -3,7 +3,7 @@
 {{ if .Title }}
 <div class="paper single">
   <article class="post">
-    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    <h2><a href="{{ .Permalink }}">{{ .Title | safeHTML }}</a></h2>
 {{ else }}
 <div class="paper shortie single">
   <article class="post">
