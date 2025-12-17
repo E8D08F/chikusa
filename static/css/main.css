@@ -112,10 +112,12 @@ a:hover, ::selection {
   background-color: var(--foreground-colour);
 }
 
-ol {
-  list-style-type: cjk-ideographic;
+ol, ul {
   list-style-position: inside;
 }
+
+ol { list-style-type: cjk-ideographic; }
+ul { list-style-type: 'ー、'; }
 
 code {
   font-family: 'Source Code Pro', monospace;
@@ -184,7 +186,10 @@ code {
   }
 
   &.shortie .post {
-    &> p + p, p + blockquote, blockquote + p, p + ol, ol + p {
+    &> p + p,
+    p + blockquote, blockquote + p,
+    p + ol, ol + p,
+    p + ul, ul + p {
       margin-block-start: 1rlh;
     }
   }
