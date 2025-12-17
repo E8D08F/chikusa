@@ -4,7 +4,7 @@
 
 <title>
   {{- if .Title }}
-    {{ .Title }}
+    {{ .Title | plainify | htmlUnescape }}
   {{ else }}
     {{ .Site.Title }}
   {{ end -}}
