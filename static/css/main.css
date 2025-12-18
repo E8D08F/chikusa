@@ -79,7 +79,7 @@ body {
   color: var(--foreground-colour);
   background-color: var(--background-colour);
 
-  padding: max(calc(100vw - 100%), 0.5rem);
+  padding-inline: max(calc(100vw - 100%), 0.5rem);
   width: 100vw;
   overflow-x: hidden;
 
