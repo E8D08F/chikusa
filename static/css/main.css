@@ -70,6 +70,7 @@ body {
     'Noto Sans HK', 'Noto Sans JP', sans-serif;
   font-weight: 400;
   font-optical-sizing: auto;
+  font-display: block;
   text-align: justify;
   hanging-punctuation: first;
 
@@ -124,9 +125,15 @@ code {
   font-family: 'Source Code Pro', monospace;
 }
 
-.tcy {
-  font-family: 'Noto Sans HK', sans-serif;
-  text-combine-upright: all;
+.tcy { text-combine-upright: all; }
+
+/* Temporal fix for Chrome */
+@supports (text-spacing-trim: normal) {
+  .tcy {
+    writing-mode: horizontal-tb;
+    line-height: 1;
+    text-indent: 0 !important;  /* `text-indent` somehow gets passed down unexpectedly */
+  }
 }
 
 .paper, .paper blockquote {
@@ -179,10 +186,8 @@ code {
   border-radius: 0.5rem;
 
   &:not(.shortie) .post, .post blockquote {
-    &> p {
-      &:not(:first-of-type) {
-        text-indent: 1rem;
-      }
+    &> p:not(:first-of-type) {
+      text-indent: 1rem;
     }
   }
 
