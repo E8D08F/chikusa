@@ -1,7 +1,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=0.95">
 
-
 <title>
   {{- if .Title }}
     {{ .Title | plainify | htmlUnescape }}
@@ -9,6 +8,31 @@
     {{ .Site.Title }}
   {{ end -}}
 </title>
+
+<meta name="twitter:card" content="summary">
+{{- with .Title -}}
+  <meta name="twitter:title" content="{{ . }}">
+  <meta property="og:title" content="{{ . }}">
+{{ else }}
+  <meta name="twitter:title" content="{{ .Site.Title }}">
+  <meta property="og:title" content="{{ .Site.Title }}">
+{{ end }}
+{{ if .IsHome }}
+  <meta name="twitter:description" content="{{ .Site.Params.itunes_description | truncate 125 }}">
+  <meta name="og:description" content="{{ .Site.Params.itunes_description | truncate 60 }}">
+  <meta name="description" content="{{ .Site.Params.itunes_description }}">
+  {{ partial "custom/socialcardimage" . }}
+{{ else }}
+  <meta name="twitter:description" content="{{ .Summary | truncate 60 }}">
+  <meta name="og:description" content="{{ .Summary | truncate 60 }}">
+  <meta name="description" content="{{ .Summary }}">
+  {{- range .Params.photos -}}
+    <meta name="twitter:image" content="{{ . }}">
+    <meta property="og:image" content="{{ . }}">
+  {{- else -}}
+    {{ partial "custom/socialcardimage" . }}
+  {{- end -}}
+{{- end -}}
 
 {{ if ne .Kind "home" }}
   <link rel="alternate" href="{{ "feed.xml" | absURL }}" type="application/rss+xml" title="{{ $.Site.Title }}">
