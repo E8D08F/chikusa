@@ -20,7 +20,7 @@
 
 {{ if .IsHome }}
   <meta name="twitter:description" content="{{ .Site.Params.itunes_description | plainify | htmlUnescape | truncate 120 }}">
-  <meta name="og:description" content="{{ .Site.Params.itunes_description plainify | htmlUnescape | truncate 120 }}">
+  <meta name="og:description" content="{{ .Site.Params.itunes_description | plainify | htmlUnescape | truncate 120 }}">
   <meta name="description" content="{{ .Site.Params.itunes_description | plainify | htmlUnescape | truncate 120 }}">
 {{ else }}
   <meta name="twitter:description" content="{{ .Summary | truncate 120 }}">
