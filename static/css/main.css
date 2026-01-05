@@ -40,7 +40,7 @@ ol, ul, menu { list-style: none; }
   --foreground-colour: #584d35; /* TODO */
   --background-colour: #e8d08f;
   --border-colour: #b8b8b8;
-  --theme-colour: #50422c;
+  --accent-colour: #50422c;
   --quote-colour: #ebdeb9;
   --unit-length: calc(30rem + 2 * (2rlh - 1rem));
 }
@@ -51,7 +51,7 @@ ol, ul, menu { list-style: none; }
     --foreground-colour: #aaa;
     --background-colour: #1b1b1b;
     --border-colour: black;
-    --theme-colour: #bfbfbf;
+    --accent-colour: #bfbfbf;
     --quote-colour: #2e2e2e;
   }
 }
@@ -98,7 +98,7 @@ body {
 
 a {
   font-weight: 600;
-  color: var(--theme-colour);
+  color: var(--accent-colour);
   text-decoration: none;
 
   transition:
@@ -111,7 +111,7 @@ a {
 
 a:hover, ::selection {
   color: var(--background-colour);
-  background-color: var(--foreground-colour);
+  background-color: var(--accent-colour);
 }
 
 ol, ul {
