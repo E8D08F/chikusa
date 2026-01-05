@@ -234,6 +234,10 @@ code {
 /* header */
 
 header {
+  /* Reset color in top safe area of Safari on iOS 26 */
+  background-color: var(--paper-colour);
+  background: none;
+
   height: calc(1rlh + 1rem + 2 * (2rlh - 1rem));
   position: sticky;
   top: calc(0.5rem - 2.5rlh);
