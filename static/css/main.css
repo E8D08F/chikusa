@@ -80,7 +80,10 @@ body {
   color: var(--foreground-colour);
   background-color: var(--background-colour);
 
-  padding: 0 max(calc(100vw - 100%), 0.5rem);
+  padding: max(calc(100vw - 100%), 0.5rem);
+  padding-top: 0;
+  padding-bottom: 0;
+
   width: 100vw;
   overflow-x: hidden;
 
