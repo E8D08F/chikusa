@@ -42,7 +42,7 @@ ol, ul, menu { list-style: none; }
   --border-colour: #b8b8b8;
   --accent-colour: #50422c;
   --quote-colour: #ebdeb9;
-  --icon-colour: var(--accent-colour);
+  --icon-colour: var(--foreground-colour);
   --unit-length: calc(30rem + 2 * (2rlh - 1rem));
 }
 
