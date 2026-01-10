@@ -42,7 +42,7 @@ ol, ul, menu { list-style: none; }
   --border-colour: #b8b8b8;
   --accent-colour: #50422c;
   --quote-colour: #ebdeb9;
-  --icon-colour: var(--foreground-colour);
+  --icon-colour: #584d35cc;
   --unit-length: calc(30rem + 2 * (2rlh - 1rem));
 }
 
@@ -53,6 +53,7 @@ ol, ul, menu { list-style: none; }
     --background-colour: #1b1b1b;
     --border-colour: black;
     --accent-colour: #bfbfbf;
+    --icon-colour: #aaaa;
     --quote-colour: #2e2e2e;
   }
 }
@@ -104,7 +105,7 @@ a {
   color: var(--accent-colour);
   text-decoration: none;
 
-  &, & > * {
+  &, & > *:not(svg) {
     transition:
       background-color .3s ease-out,
       color .3s ease-out;
@@ -114,7 +115,7 @@ a {
   }
 }
 
-a:hover, a:hover > *, ::selection {
+a:hover, a:hover > *:not(svg), ::selection {
   color: var(--background-colour);
   background-color: var(--accent-colour);
 }
@@ -252,7 +253,7 @@ code {
 
 header {
   position: sticky;
-  top: calc(-1rlh + (0.25rlh - 0.25rem));
+  top: calc(-1rlh);
   width: 100vw;
   margin-left: -0.5rem;
   z-index: 100;
@@ -271,20 +272,21 @@ header {
     .links {
       display: flex;
       gap: 1rem;
-      margin-top: calc(0.25rlh - 0.25rem);
+      margin-top: calc(0.125rlh - 0.125rem);
 
       a {
         display: flex;
         flex-direction: column;
         align-items: center;
-        line-height: 1;
 
         &:hover {
           background-color: unset;
           color: unset;
         }
 
-        gap: calc(0.25rlh - 0.25rem);
+        .label {
+          margin-top: calc(0.25rem - 0.25rlh);
+        }
       }
     }
   }
