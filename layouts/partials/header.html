@@ -5,19 +5,25 @@
     <div class="links">
       <a href="/feed.xml">
         {{ with resources.Get "icon/milkie.svg" }}
-          {{ .Content }}
+          {{ .Content | safeHTML }}
+        {{ else }}
+          <!-- Not found -->
         {{ end }}
         <div class="label">RSS</div>
       </a>
       <a href="/#ū-ê-bô-ê">
         {{ with resources.Get "icon/noren.svg" }}
           {{ .Content }}
+        {{ else }}
+          <!-- Not found -->
         {{ end }}
         <div class="label">有的冇的</div>
       </a>
       <a href="mailto:toto@chunghwa.asia">
         {{ with resources.Get "icon/luv lettre boi.svg" }}
           {{ .Content }}
+        {{ else }}
+          <!-- Not found -->
         {{ end }}
         <div class="label">來函</div>
       </a>
