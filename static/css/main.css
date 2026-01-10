@@ -256,7 +256,11 @@ header {
   width: 100vw;
   margin-left: -0.5rem;
   z-index: 100;
-  background: linear-gradient(to bottom, var(--background-colour), transparent);
+  background-image: linear-gradient(
+    to bottom,
+    var(--background-colour) calc(1rlh + 0.25rem),
+    transparent
+  );
 
   nav {
     display: flex;
