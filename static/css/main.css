@@ -42,6 +42,7 @@ ol, ul, menu { list-style: none; }
   --border-colour: #b8b8b8;
   --accent-colour: #50422c;
   --quote-colour: #ebdeb9;
+  --icon-colour: var(--accent-colour);
   --unit-length: calc(30rem + 2 * (2rlh - 1rem));
 }
 
@@ -80,7 +81,7 @@ body {
   color: var(--foreground-colour);
   background-color: var(--background-colour);
 
-  padding: max(calc(100vw - 100%), 0.5rem);
+  padding: 0.5rem;
   padding-top: 0;
   padding-bottom: 0;
 
@@ -103,15 +104,17 @@ a {
   color: var(--accent-colour);
   text-decoration: none;
 
-  transition:
-    background-color .3s ease-out,
-    color .3s ease-out;
+  &, & > * {
+    transition:
+      background-color .3s ease-out,
+      color .3s ease-out;
 
-  border-radius: 0.2rem;
-  cursor: none;
+    border-radius: 0.2rem;
+    cursor: none;
+  }
 }
 
-a:hover, ::selection {
+a:hover, a:hover > *, ::selection {
   color: var(--background-colour);
   background-color: var(--accent-colour);
 }
@@ -236,11 +239,24 @@ code {
 
 /* header */
 
+.icon {
+  width: 45px;
+  height: 45px;
+  color: var(--icon-colour);
+}
+
+.fix-safe-area-colour {
+  height: calc(2rlh - 1rem - (0.5rlh - 0.5rem));
+  width: 100%;
+}
+
 header {
-  height: calc(1rlh + 1rem + 2 * (2rlh - 1rem));
   position: sticky;
-  top: calc(0.5rem - 2.5rlh);
+  top: calc(-1rlh + (0.25rlh - 0.25rem));
+  width: 100vw;
+  margin-left: -0.5rem;
   z-index: 100;
+  background: linear-gradient(to bottom, var(--background-colour), transparent);
 
   nav {
     display: flex;
@@ -251,6 +267,21 @@ header {
     .links {
       display: flex;
       gap: 1rem;
+      margin-top: calc(0.25rlh - 0.25rem);
+
+      a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 1;
+
+        &:hover {
+          background-color: unset;
+          color: unset;
+        }
+
+        gap: calc(0.25rlh - 0.25rem);
+      }
     }
   }
 }
@@ -259,19 +290,23 @@ header {
 body::before {
   content: '';
   position: fixed;
-  height: calc(2rlh + env(safe-area-inset-top));
+  height: calc(2.333rlh + 45px);
   top: 0;
   left: 0;
   right: 0;
   backdrop-filter: blur(54px);
   z-index: 10;
 
-  mask-image: linear-gradient(to top, transparent, #000 1.9rem);
+  mask-image: linear-gradient(to top, transparent, #000 2.4rem);
 }
 
 header nav, #ū-ê-bô-ê {
   padding: calc(2rlh - 1rem - (0.5rlh - 0.5rem)) 0;
   margin: 0 auto;
+}
+
+header nav {
+  padding-top: 0;
 }
 
 #ū-ê-bô-ê {
@@ -284,13 +319,9 @@ header nav, #ū-ê-bô-ê {
   }
 }
 
-.faded {
-  opacity: 0.72;
-}
-
 @media (max-width: 550px) {
   body {
-    padding-bottom: max(calc(100vw - 100%), 0.5rem);
+    padding-bottom: 0.5rem;
   }
 
   .paper {
