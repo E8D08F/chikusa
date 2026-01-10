@@ -4,26 +4,20 @@
     <h1><a href="/">{{ .Site.Title }}</a></h1>
     <div class="links">
       <a href="/feed.xml">
-        {{ with resources.Get "icon/milkie.svg" }}
+        {{ with resources.Get "icons/milkie.svg" }}
           {{ .Content | safeHTML }}
-        {{ else }}
-          <!-- Not found -->
         {{ end }}
         <div class="label">RSS</div>
       </a>
       <a href="/#ū-ê-bô-ê">
-        {{ with resources.Get "icon/noren.svg" }}
-          {{ .Content }}
-        {{ else }}
-          <!-- Not found -->
+        {{ with resources.Get "icons/noren.svg" }}
+          {{ .Content | safeHTML }}
         {{ end }}
         <div class="label">有的冇的</div>
       </a>
       <a href="mailto:toto@chunghwa.asia">
-        {{ with resources.Get "icon/luv lettre boi.svg" }}
-          {{ .Content }}
-        {{ else }}
-          <!-- Not found -->
+        {{ with resources.Get "icons/luv lettre boi.svg" }}
+          {{ .Content | safeHTML }}
         {{ end }}
         <div class="label">來函</div>
       </a>

@@ -4,12 +4,12 @@
 
 @font-face {
   font-family: punc;
-  src: url('/assets/punc.ttf') format('truetype');
+  src: url('/fonts/punc.ttf') format('truetype');
 }
 
 @font-face {
   font-family: kana;
-  src: url('/assets/kana.ttf') format('truetype');
+  src: url('/fonts/kana.ttf') format('truetype');
 }
 
 .material-symbols-outlined {
