@@ -266,7 +266,7 @@ header {
 
     .links {
       display: flex;
-      gap: 1rem;
+      gap: 1.8rem;
 
       a {
         display: flex;
