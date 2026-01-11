@@ -43,6 +43,7 @@ ol, ul, menu { list-style: none; }
   --accent-colour: #50422c;
   --quote-colour: #ebdeb9;
   --icon-colour: #584d35cc;
+  --milk-colour: var(--background-colour);
   --unit-length: calc(30rem + 2 * (2rlh - 1rem));
 }
 
@@ -54,6 +55,7 @@ ol, ul, menu { list-style: none; }
     --border-colour: black;
     --accent-colour: #bfbfbf;
     --icon-colour: #aaaa;
+    --milk-colour: var(--icon-colour);
     --quote-colour: #2e2e2e;
   }
 }
