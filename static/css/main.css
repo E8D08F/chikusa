@@ -246,20 +246,15 @@ code {
   color: var(--icon-colour);
 }
 
-.fix-safe-area-colour {
-  height: calc(2rlh - 1rem - (0.5rlh - 0.5rem));
-  width: 100%;
-}
-
 header {
   position: sticky;
-  top: calc(-1rlh - 45px - 0.25rem + 0.25rlh);
+  top: calc(-2rlh + 1rem - 1rlh - 45px - 0.25rem + 0.25rlh);
   width: 100vw;
   margin-left: -0.5rem;
   z-index: 100;
   background-image: linear-gradient(
     to bottom,
-    var(--background-colour) calc(1rlh + 45px),
+    var(--background-colour) calc(2rlh - 1rem + 1rlh + 45px + 0.5rem),
     transparent
   );
 
@@ -296,27 +291,9 @@ header {
   }
 }
 
-/* Top links background blur */
-body::before {
-  content: '';
-  position: fixed;
-  height: calc(1.8rlh);
-  top: 0;
-  left: 0;
-  right: 0;
-  backdrop-filter: blur(54px);
-  z-index: 10;
-
-  mask-image: linear-gradient(to top, transparent, #000 1.9rem);
-}
-
 header nav, #ū-ê-bô-ê {
   padding: calc(2rlh - 1rem - (0.5rlh - 0.5rem)) 0;
   margin: 0 auto;
-}
-
-header nav {
-  padding-top: 0;
 }
 
 #ū-ê-bô-ê {
