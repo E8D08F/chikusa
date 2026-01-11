@@ -253,13 +253,13 @@ code {
 
 header {
   position: sticky;
-  top: calc(-1rlh);
+  top: calc(-1rlh - 45px - 0.25rem + 0.25rlh);
   width: 100vw;
   margin-left: -0.5rem;
   z-index: 100;
   background-image: linear-gradient(
     to bottom,
-    var(--background-colour) calc(1rlh + 0.25rem),
+    var(--background-colour) calc(1rlh + 45px),
     transparent
   );
 
@@ -272,16 +272,20 @@ header {
     .links {
       display: flex;
       gap: 1rem;
-      margin-top: calc(0.125rlh - 0.125rem);
 
       a {
         display: flex;
         flex-direction: column;
         align-items: center;
+        color: var(--icon-colour);
 
         &:hover {
           background-color: unset;
           color: unset;
+
+          .label {
+            background-color: var(--icon-colour);
+          }
         }
 
         .label {
@@ -296,14 +300,14 @@ header {
 body::before {
   content: '';
   position: fixed;
-  height: calc(2.333rlh + 45px);
+  height: calc(1.8rlh);
   top: 0;
   left: 0;
   right: 0;
   backdrop-filter: blur(54px);
   z-index: 10;
 
-  mask-image: linear-gradient(to top, transparent, #000 2.4rem);
+  mask-image: linear-gradient(to top, transparent, #000 1.9rem);
 }
 
 header nav, #ū-ê-bô-ê {
