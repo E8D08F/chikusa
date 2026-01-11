@@ -272,15 +272,10 @@ header {
         display: flex;
         flex-direction: column;
         align-items: center;
-        color: var(--icon-colour);
 
         &:hover {
           background-color: unset;
           color: unset;
-
-          .label {
-            background-color: var(--icon-colour);
-          }
         }
 
         .label {
