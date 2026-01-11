@@ -248,7 +248,7 @@ code {
 
 header {
   position: sticky;
-  top: calc(-2rlh + 1rem - 1rlh - 45px - 0.25rem + 0.25rlh);
+  top: calc(-2rlh + 1rem + 0.5rlh - 0.5rem - 1rlh - 45px + 0.25rlh - 0.25rem);
   width: 100vw;
   margin-left: -0.5rem;
   z-index: 100;
