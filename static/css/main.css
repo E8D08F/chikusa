@@ -1,6 +1,5 @@
 @import "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200";
-@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Noto+Sans+HK:wght@100..900&family=Noto+Sans+JP:wght@100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@200..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
 @font-face {
   font-family: punc;
@@ -10,6 +9,17 @@
 @font-face {
   font-family: kana;
   src: url('/fonts/kana.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Chubbo;
+  src: url('/fonts/Chubbo.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Chubbo;
+  src: url('/fonts/Chubbo-Italic.woff2') format('woff2');
+  font-style: italic;
 }
 
 .material-symbols-outlined {
@@ -70,8 +80,8 @@ body {
   font-family:
     punc,  /* Use features `chws`/`vchw` */
     kana,  /* Use features `palt`/`vpal` */
-    Aleo,  /* Latin */
-    'Noto Sans HK', 'Noto Sans JP', sans-serif;
+    Chubbo,  /* Latin */
+    'Chiron GoRound TC', sans-serif;
   font-weight: 400;
   font-optical-sizing: auto;
   font-display: block;
@@ -103,7 +113,7 @@ body {
 }
 
 a {
-  font-weight: 600;
+  font-weight: 550;
   color: var(--accent-colour);
   text-decoration: none;
 
