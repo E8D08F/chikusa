@@ -257,6 +257,17 @@ code {
   }
 }
 
+@supports (overscroll-behavior:contain) {
+  .paper:not(.shortie) .post {
+    mask:
+      linear-gradient(90deg,  rgba(0, 0, 0, .2), black .333rem) left,
+      linear-gradient(270deg, rgba(0, 0, 0, .2), black .333rem) right;
+    mask-repeat: no-repeat;
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;
+  }
+}
+
 /* header */
 
 .icon {
