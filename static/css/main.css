@@ -119,7 +119,7 @@ a {
   color: var(--accent-colour);
   text-decoration: none;
 
-  &, & > *:not(svg) {
+  &, & > *:not(svg):not(code) {
     transition:
       background-color .3s ease-out,
       color .3s ease-out;
@@ -129,7 +129,7 @@ a {
   }
 }
 
-a:hover, a:hover > *:not(svg), ::selection {
+a:hover, a:hover > *:not(svg):not(code), ::selection {
   color: var(--background-colour);
   background-color: var(--accent-colour);
 }
