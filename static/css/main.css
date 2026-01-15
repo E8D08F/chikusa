@@ -5,22 +5,22 @@
 
 @font-face {
   font-family: punc;
-  src: url('/fonts/punc.otf') format('opentype');
+  src: url('/webfonts/punc.woff2') format('woff2');
 }
 
 @font-face {
   font-family: kana;
-  src: url('/fonts/kana.otf') format('opentype');
+  src: url('/webfonts/kana.woff2') format('woff2');
 }
 
 @font-face {
   font-family: Chubbo;
-  src: url('/fonts/Chubbo.woff2') format('woff2');
+  src: url('/webfonts/Chubbo.woff2') format('woff2');
 }
 
 @font-face {
   font-family: Chubbo;
-  src: url('/fonts/Chubbo-Italic.woff2') format('woff2');
+  src: url('/webfonts/Chubbo-Italic.woff2') format('woff2');
   font-style: italic;
 }
 
