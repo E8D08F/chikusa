@@ -65,7 +65,7 @@
   "taxonomies": {
     "category": "categories"
   },
-  "rssLimit": 25,
+  "rssLimit": 99,
   "uglyURLs": false,
   "blackfriday": {
     "fractions": false
@@ -80,7 +80,7 @@
   "enableRobotsTXT": true,
   "languageCode": "[LANGUAGE]",
   "defaultContentLanguage": "[LANGUAGE]",
-  "paginate": 25,
+  "paginate": 99,
   "pluralizeListTitles": false,
   "params": {
     "description": "Follow <a href=\"https://micro.blog/[USERNAME]\">@[USERNAME] on Micro.blog</a>.",
