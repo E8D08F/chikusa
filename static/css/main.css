@@ -156,12 +156,12 @@ code {
   }
 }
 
-.paper, .paper blockquote, .paper pre {
+.paper, .post blockquote, .post pre {
   box-shadow: inset 0 1px 0 #fff6;
 }
 
 @media (prefers-color-scheme: dark) {
-  .paper, .paper blockquote, .paper pre {
+  .paper, .post blockquote, .post pre {
     box-shadow: inset 0 0 0 1px #fff2;
   }
 }
@@ -243,11 +243,34 @@ code {
       padding-inline: 1rem;
       padding-block:  calc(1rem - (0.5rlh - 0.5rem));
 
-      border: 0.75px solid var(--border-colour);
-      border-radius: 0.333rem;
-
       &:last-child {
         margin-block-end: calc(0.5rlh - 0.5rem);
+      }
+    }
+
+    blockquote, pre {
+      border: 0.75px solid var(--border-colour);
+      border-radius: 0.333rem;
+    }
+
+    figure {
+      display: grid;
+      img, figcaption {
+        grid-row: 1;
+        grid-column: 1;
+      }
+
+      svg { display: block; }
+
+      figcaption {
+        opacity: 0.667;
+        transition:
+          opacity .3s ease-out;
+
+        &:hover {
+          cursor: none;
+          opacity: 1;
+        }
       }
     }
   }
