@@ -260,7 +260,11 @@ code {
         grid-column: 1;
       }
 
-      svg { display: block; }
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
 
       figcaption {
         opacity: 0.667;
