@@ -267,13 +267,13 @@ code {
       }
 
       figcaption {
-        opacity: 0.667;
+        opacity: 1;
         transition:
           opacity .3s ease-out;
 
         &:hover {
           cursor: none;
-          opacity: 1;
+          opacity: 0.5;
         }
       }
     }
