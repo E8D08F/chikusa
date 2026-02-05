@@ -1,16 +1,16 @@
-{{ define "main" }}
-
+{{ define "main" -}}
 <div class="posts">
-  {{ $paginator := .Paginate (where .Site.Pages.ByDate.Reverse "Type" "post") }}
-  {{ range .Paginator.Pages }}
-  {{ if .Title }}
+  {{- $paginator := .Paginate (where .Site.Pages.ByDate.Reverse "Type" "post") }}
+  {{- range .Paginator.Pages }}
+  {{- if .Title }}
   <div class="paper">
     <article class="post">
+      <span style="display: none;">{{ .File.BaseFileName }} / {{ path.Base (urls.Parse .Permalink).Path }} / {{ .Slug }}</span>
       <h2><a href="{{ .Permalink }}">{{ .Title | safeHTML }}</a></h2>
-  {{ else }}
+  {{- else }}
   <div class="paper shortie">
     <article class="post">
-  {{ end }}
+  {{- end }}
       {{ .Content }}
     </article>
     <a href="{{ .Permalink }}" class="material-symbols-outlined link">link</a>
@@ -23,5 +23,4 @@
     {{ .Site.Params.about_me | safeHTML }}
   </article>
 </div>
-
-{{ end }}
+{{- end }}
