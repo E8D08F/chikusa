@@ -1,16 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh-HK">
-  {{- if .Title }}
-    <!-- has title -->
-  {{ else }}
-    <!-- has no title -->
-  {{ end -}}
-
-  {{ partial "head.html" . }}
-  <body>
-    {{ partial "header.html" . }}
-    {{ block "main" . }}{{ end }}
-    {{ partial "footer.html" . }}
-    {{ partial "custom_footer.html" . }}
-  </body>
+{{- if .IsHome }}
+<html lang="zh-HK" data-home="true">
+{{- else }}
+<html lang="zh-HK" data-home="false">
+{{- end }}
+{{ partial "head.html" . }}
+<body>
+  {{ partial "header.html" . }}
+  {{ block "main" . }}{{ end }}
+  {{ partial "footer.html" . }}
+</body>
 </html>
