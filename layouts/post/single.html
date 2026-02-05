@@ -1,16 +1,14 @@
-{{ define "main" }}
-
-{{ if .Title }}
-<div class="paper single">
+{{- define "main" }}
+{{- if .Title }}
+<div class="paper single" style="view-transition-name: {{ .File.BaseFileName }};">
   <article class="post">
     <h2><a href="{{ .Permalink }}">{{ .Title | safeHTML }}</a></h2>
-{{ else }}
+{{- else }}
 <div class="paper shortie single">
   <article class="post">
-{{ end }}
+{{- end }}
     {{ .Content }}
   </article>
   <a href="{{ .Permalink }}" class="material-symbols-outlined link">link</a>
 </div>
-
-{{ end }}
+{{- end }}
