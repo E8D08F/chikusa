@@ -5,7 +5,7 @@
   {{- if .Title }}
   <div class="paper">
     <article class="post">
-      <span style="display: none;">{{ .File.BaseFileName }} / {{ path.Base (urls.Parse .Permalink).Path }} / {{ .Slug }}</span>
+      <span style="display: none;">Here! {{ .File.BaseFileName }} / {{ path.Base (urls.Parse .Permalink).Path }} / {{ .Slug }}</span>
       <h2><a href="{{ .Permalink }}">{{ .Title | safeHTML }}</a></h2>
   {{- else }}
   <div class="paper shortie">
