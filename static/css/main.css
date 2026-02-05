@@ -60,9 +60,49 @@ ol, ul, menu { list-style: none; }
     --background-colour: #1b1b1b;
     --border-colour: black;
     --accent-colour: #bfbfbf;
-    --icon-colour: #aaaa; 
+    --icon-colour: #aaaa;
     --quote-colour: #2e2e2e;
   }
+}
+
+@view-transition { navigation: auto; }
+
+::view-transition-old(*),
+::view-transition-new(*) {
+  animation: none;
+}
+
+::view-transition-old(*),
+::view-transition-new(*),
+::view-transition-group(*) {
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+}
+
+html[data-home="false"]::view-transition-new(*),
+html[data-home="true"]::view-transition-old(*) {
+  animation-name: unfurl;
+}
+
+@keyframes unfurl {
+  from {
+    clip-path: inset(0 0 0 calc(100% - var(--unit-length)));
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+html[data-home="true"] {
+  &::view-transition-new(*) { display: none; }
+  &::view-transition-old(*) { animation-direction: reverse; }
+}
+
+::view-transition-group(root),
+::view-transition-old(root),
+::view-transition-new(root) {
+  display: unset !important;
+  animation: none !important;
 }
 
 html, body {
