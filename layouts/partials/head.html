@@ -8,37 +8,37 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chiron-go-round-tc-webfont@1.0.9/css/vf.min.css">
 
-  {{ $title := .Title | default .Site.Title | plainify | htmlUnescape -}}
+{{- $title := .Title | default .Site.Title | plainify | htmlUnescape }}
   <title>{{ $title }}</title>
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="{{ $title }}">
   <meta property="og:title" content="{{ $title }}">
 
-{{ if .IsHome }}
-  {{- $description := .Site.Params.itunes_description | plainify | htmlUnescape | replace "\n" "" -}}
+{{- if .IsHome }}
+  {{- $description := .Site.Params.itunes_description | plainify | htmlUnescape | replaceRE "[\r\n]+" "" }}
   <meta name="twitter:description" content="{{ $description }}">
   <meta name="og:description" content="{{ $description }}">
   <meta name="description" content="{{ $description }}">
-{{ else }}
-  {{- $summary := .Summary | truncate 120 -}}
+{{- else }}
+  {{- $summary := .Summary | truncate 120 }}
   <meta name="twitter:description" content="{{ $summary }}">
   <meta name="og:description" content="{{ $summary }}">
   <meta name="description" content="{{ $summary }}">
-{{ end }}
+{{- end }}
 
-{{ if ne .Kind "home" }}
+{{- if ne .Kind "home" }}
   <link rel="alternate" href="{{ "feed.xml" | absURL }}" type="application/rss+xml" title="{{ $.Site.Title }}">
   <link rel="alternate" href="{{ "feed.json" | absURL }}" type="application/json" title="{{ $.Site.Title }}">
-{{ end }}
+{{- end }}
 
-{{ range .AlternativeOutputFormats }}
+{{- range .AlternativeOutputFormats }}
   {{ printf `<link rel="%s" href="%s" type="%s" title="%s">` .Rel .Permalink .MediaType.Type $.Site.Title | safeHTML }}
-{{ end}}
+{{- end}}
 
-{{ if .Site.Params.has_podcasts }}
+{{- if .Site.Params.has_podcasts }}
   <link rel="alternate" href="{{ "podcast.xml" | absURL }}" type="application/rss+xml" title="Podcast">
   <link rel="alternate" href="{{ "podcast.json" | absURL }}" type="application/json" title="Podcast">
-{{ end }}
+{{- end }}
 
   <meta content="{{ .Site.Author.name }}" name="author">
   <link rel="me" href="https://micro.blog/{{ .Site.Author.username }}">
@@ -54,11 +54,11 @@
   <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
   <link rel="stylesheet" href="{{ "custom.css" | relURL }}?{{ .Site.Params.theme_seconds }}">
 
-{{ range .Site.Params.plugins_css }}
+{{- range .Site.Params.plugins_css }}
   <link rel="stylesheet" href="{{ . }}">
-{{ end }}
+{{- end }}
 
-{{ range $filename := .Site.Params.plugins_html }}
-  {{- partial $filename $ }}
-{{ end }}
+{{- range $filename := .Site.Params.plugins_html }}
+  {{ partial $filename $ }}
+{{- end }}
 </head>
