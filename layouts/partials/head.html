@@ -20,7 +20,7 @@
   <meta name="og:description" content="{{ $description }}">
   <meta name="description" content="{{ $description }}">
 {{- else }}
-  {{- $summary := .Summary | truncate 120 }}
+  {{- $summary := .Summary | replaceRE "[\r\n]+" "" | truncate 180 }}
   <meta name="twitter:description" content="{{ $summary }}">
   <meta name="og:description" content="{{ $summary }}">
   <meta name="description" content="{{ $summary }}">
