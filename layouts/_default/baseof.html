@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="zh-HK">
-    {{ partial "head.html" . }}
-    <body>
-        {{ partial "header.html" . }}
-        {{ block "main" . }}{{ end }}
-        {{ partial "footer.html" . }}
-		{{ partial "custom_footer.html" . }}
-    </body>
+  {{- if .Title }}
+    <!-- has title -->
+  {{ else }}
+    <!-- has no title -->
+  {{ end -}}
+
+  {{ partial "head.html" . }}
+  <body>
+    {{ partial "header.html" . }}
+    {{ block "main" . }}{{ end }}
+    {{ partial "footer.html" . }}
+    {{ partial "custom_footer.html" . }}
+  </body>
 </html>
