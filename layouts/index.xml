@@ -9,6 +9,11 @@
     </title>
     <link>{{ .Permalink }}</link>
     <description></description>
+    <image>
+      <url>{{ .Site.Author.avatar }}</url>
+      <title>{{ .Site.Title }}</title>
+      <link>{{ .Permalink }}</link>
+    </image>
     {{ with .Site.LanguageCode }}
     <language>{{.}}</language>
     {{ end }}
