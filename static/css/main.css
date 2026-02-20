@@ -232,8 +232,7 @@ code {
   }
   &.single:not(.shortie) { width: calc(0.5rem + 28rlh + (2rlh - 1rem)); }
 
-  margin: 0 auto;
-  & + .paper { margin-top: calc(2rlh - 1rem); }
+  margin: 0 auto calc(2rlh - 1rem);
 
   background-color: var(--paper-colour);
   border: 0.75px solid var(--border-colour);
@@ -358,6 +357,7 @@ header {
     flex-direction: column;
     align-items: center;
     max-width: var(--unit-length);
+    padding-top: calc(2rlh - 1rem - (0.5rlh - 0.5rem));
 
     .links {
       display: flex;
@@ -382,12 +382,13 @@ header {
 }
 
 header nav, #ū-ê-bô-ê {
-  padding: calc(2rlh - 1rem - (0.5rlh - 0.5rem)) 0;
+  padding-bottom: calc(2rlh - 1rem - (0.5rlh - 0.5rem));
   margin: 0 auto;
 }
 
 #ū-ê-bô-ê {
   width: fit-content;
+  margin-top: calc(0.5rem - 0.5rlh);
 
   article {
     margin-inline: calc(2rlh - 1rem);
