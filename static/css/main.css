@@ -200,6 +200,9 @@ code {
   }
 }
 
+/* Remove focus ring for single page article */
+:focus { outline: none; }
+
 .paper {
   a:hover, ::selection { color: var(--paper-colour); }
 
