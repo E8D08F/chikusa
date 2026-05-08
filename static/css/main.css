@@ -287,7 +287,7 @@ code {
       padding-block:  calc(1rem - (0.5rlh - 0.5rem));
 
       &:last-child {
-        margin-block-end: calc(0.5rlh - 0.5rem);
+        margin-block-end: calc(0.5rlh - 0.5rem) !important;
       }
     }
 
