@@ -239,7 +239,7 @@ code {
 
   background-color: var(--paper-colour);
   border: 0.75px solid var(--border-colour);
-  border-radius: 0.75rem;
+  border-radius: 0.667rem;
   /* corner-shape: squircle; */
 
   &:not(.shortie) .post, .post blockquote {
@@ -294,7 +294,7 @@ code {
 
     blockquote, pre {
       border: 0.75px solid var(--border-colour);
-      border-radius: 0.333rem;
+      border-radius: 0.5rem;
     }
 
     figure {
